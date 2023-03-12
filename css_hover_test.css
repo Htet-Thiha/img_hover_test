@@ -1,0 +1,103 @@
+body {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.box_container {
+    width: 500px;
+    margin: 50px auto;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.box {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    top: 50%;
+    margin-top: -500px;
+    background-color: rgb(0, 0, 0);
+    transition: 1s;
+}
+
+.top_box {
+    width: 100%;
+    height: 50%;
+    background-color: orange;
+}
+
+.img_wrapper {
+    z-index: 1;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    margin-left: -200px;
+    top: 40%;
+    margin-top: -200px;
+    transition: 1s;
+    /* background-color: bisque; */
+}
+
+img {
+    width: 100%;
+}
+
+.box_container:hover .box {
+    transform: rotate(15deg);
+}
+
+.box_container:hover .img_wrapper {
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    margin-left: -150px;
+    top: 35%;
+    margin-top: -150px;
+}
+
+.text {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    color: white;
+}
+
+.button_wrapper {
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 80%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.button {
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5rem;
+    background-color: orange;
+    border-radius: 50px;
+    width: 180px;
+    height: 50px;
+    border: 0px solid;
+}
+
+.box_container:hover .button_wrapper {
+    top: 65%;
+    gap: 20px;
+}
+
+.box_container:hover .button_wrapper .button {
+    cursor: pointer;
+}

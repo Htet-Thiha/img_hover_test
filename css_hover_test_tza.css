@@ -1,0 +1,46 @@
+.box-wrapper {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.box-wrapper .inner-box {
+    width: 1100px;
+    height: 500px;
+    background-color: black;
+}
+
+.box-wrapper .inner-box .top-box {
+    transform: translateX(-400px);
+    width: 100%;
+    height: 50%;
+    background-color: orange;
+    transition: transform 0.5s;
+}
+
+.box-wrapper .item-wrapper {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-wrapper .img-wrapper {
+    width: 55%;
+    height: 250px;
+}
+
+.box-wrapper .img-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.box-wrapper:hover .top-box {
+    transform: translateY(300px);
+    transform: rotate(25deg);
+}
